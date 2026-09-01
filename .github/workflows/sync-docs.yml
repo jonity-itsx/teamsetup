@@ -18,7 +18,20 @@ jobs:
           service_account: 'my-service-account@teamjonity.iam.gserviceaccount.com'
           workload_identity_provider: 'projects/213617463337/locations/global/workloadIdentityPools/github/providers/my-repo'
 
-      - name: google-docs-to-github
+      - name: Sync folder 1
         uses: r7kamura/google-docs-to-github@v3.0.1
         with:
-          google_drive_folder_id: '1ernijF6o3U_XQ050dbM0qlYE7p2DOBm_'
+          google_drive_folder_id: '1KY4aMu7o_gCZmq2YCNY0l3zeWrjhpowj'
+          github_directory: 'google_docs/folder1'
+
+      - name: Sync folder 2
+        uses: r7kamura/google-docs-to-github@v3.0.1
+        with:
+          google_drive_folder_id: '1sinaL0YtKhye-QX4brsBHrJKZMu3ic5r'
+          github_directory: 'google_docs/folder2'
+
+      - name: Sync folder 3
+        uses: r7kamura/google-docs-to-github@v3.0.1
+        with:
+          google_drive_folder_id: '1IxFOMTUMFKmPawL6ec7GmDPOt5N_ihfP'
+          github_directory: 'google_docs/folder3'
