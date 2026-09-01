@@ -1,0 +1,24 @@
+name: Sync Google Docs to GitHub
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: 'write'
+  id-token: 'write'
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@v3
+        with:
+          service_account: 'my-service-account@teamjonity.iam.gserviceaccount.com'
+          workload_identity_provider: 'projects/213617463337/locations/global/workloadIdentityPools/github/providers/my-repo'
+
+      - name: google-docs-to-github
+        uses: r7kamura/google-docs-to-github@v3.0.1
+        with:
+          google_drive_folder_id: '1ernijF6o3U_XQ050dbM0qlYE7p2DOBm_'
