@@ -1,0 +1,10 @@
+Steg,Part of Chain,Technique,Beskrivning av steg,Försvars Fråga,Källa
+1,Reconaissance,Active Scanning (Scanning ip Blocks),Scanning av IP:addresser för att hitta sårbara attack punkter.,Säker nätverksstruktur. DMZ. ,https://attack.mitre.org/techniques/T1595/
+2,Initial Access,Phishing (Spearphising),Mass utskicka av email för att försöka få tillgång eller letande av en spesifik person med mer behörigheter.,Utbildning av Personal. Bara interna mail addresser. Användare får inte köra program från mail.,https://attack.mitre.org/techniques/T1566/
+3,Execution,Command and Scripting Interpeter,Angriparen använder kommandon eller skript för att köra aktiviteter på ett komprometterat system.,Zero trust på användare. MFA. Hur sparas credentials?,https://attack.mitre.org/techniques/T1555/
+4,Credential Access,Credentials from Password Stores,"
+
+Angriparen söker efter och hämtar sparade lösenord från systemets eller applikationers lösenordsförråd.",Övervaka misstänkta kommandon och skript.,https://attack.mitre.org/techniques/T1059/
+5,Exfiltration,Data Transfer Size Limits, Data tas ut från organisations miljö bitvis för att undvika tröskelvarningar för nätverksdata,Övervaka ovanliga dataöverföringar och molnaktiviteter.,https://attack.mitre.org/techniques/T1030
+6,Impact,Data Destruction,"Lifecycle-Triggered Deletion - https://attack.mitre.org/techniques/T1485/001/
+Borttagning av data, kan göras manuellt också.","Säkerhetskopior, MFA & UAM (User Account Managment)",https://attack.mitre.org/techniques/T1485/
